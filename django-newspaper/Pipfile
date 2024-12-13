@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-crispy-forms = "*"
+crispy-bootstrap5 = "*"
+ipython = "*"
+python-decouple = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+whitenoise = "*"
+gunicorn = "*"
+furl = "*"
+django-bakery = "*"
+faker = "*"
+bleach = {extras = ["css"], version = "*"}
+html2text = "*"
+beautifulsoup4 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

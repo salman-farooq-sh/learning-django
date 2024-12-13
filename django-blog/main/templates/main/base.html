@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+    <link href="{% static 'main/style.css' %}" rel="stylesheet">
+
+    <title>My Blog</title>
+</head>
+<body>
+<header>
+    <div class="nav-left">
+        <h1><a href="{% url 'main:homepage' %}">My Blog</a></h1>
+    </div>
+    <div class="nav-right">
+        <h1>
+            {% if user.is_authenticated %}
+                Hi, {{ user.username }}! | <a href="{% url 'logout' %}">Log Out</a>
+            {% else %}
+                <a href="{% url 'login' %}">Log In</a> | <a href="{% url 'accounts:signup' %}">Sign Up</a>
+            {% endif %}
+        </h1>
+    </div>
+</header>
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
+</body>
+</html>
