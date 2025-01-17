@@ -1,0 +1,7 @@
+{% extends "account/email/base_message.txt" %}
+{% load account %}
+{% load i18n %}
+
+{% block content %}{% autoescape off %}{% user_display user as user_display %}{% block a_name %}You're receiving this e-mail because user {{ user_display }} has given your e-mail address to register an account on {{ current_site.domain }}.
+
+To confirm that this is correct, make a POST request on {% url 'rest_verify_email' %} with this key: {{ key }}{% endblock %}{% endautoescape %}{% endblock %}
