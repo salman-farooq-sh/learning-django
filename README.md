@@ -1,3 +1,5 @@
+# Short descriptions of everything here
+
 **django-rest-serpy**: Trying out fast de/serialization with `serpy`
 
 **django-filter**: Trying out the `django-filter` package with `django-crispy-forms`
